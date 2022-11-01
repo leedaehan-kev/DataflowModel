@@ -2,10 +2,14 @@
 [https://chatbot.kakao.com](https://chatbot.kakao.com)
 
 Json 예시
+
+GoormIde 
 [https://i.kakao.com/docs/skill-response-format#action](https://i.kakao.com/docs/skill-response-format#action)
 
 ![image](https://user-images.githubusercontent.com/116808840/199216515-1cdc927f-aac9-4d02-859c-c5e5d8c7594c.png)
 
+
+Kakao Chatbot
 ![image](https://user-images.githubusercontent.com/116808840/199216598-39694db0-673c-4cac-a1ab-b2b22f6da680.png)
 
 ![image](https://user-images.githubusercontent.com/116808840/199216807-78b8cb48-ae3c-4cd2-93e2-dcb51cd3e998.png)
@@ -15,6 +19,7 @@ Json 예시
 ![image](https://user-images.githubusercontent.com/116808840/199216967-983bbebe-ee52-43fa-a4ea-f537a6306978.png)
 
 ![image](https://user-images.githubusercontent.com/116808840/199217229-77e10c44-405d-4052-b1b3-5b5fe1722ad7.png)
+
 
 
 
