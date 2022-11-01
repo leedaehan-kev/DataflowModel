@@ -2,9 +2,11 @@
 [https://chatbot.kakao.com](https://chatbot.kakao.com)
 
 Json 예시
+[https://i.kakao.com/docs/skill-response-format#action](https://i.kakao.com/docs/skill-response-format#action)
+
 
 GoormIde 
-[https://i.kakao.com/docs/skill-response-format#action](https://i.kakao.com/docs/skill-response-format#action)
+
 
 ![image](https://user-images.githubusercontent.com/116808840/199216515-1cdc927f-aac9-4d02-859c-c5e5d8c7594c.png)
 
