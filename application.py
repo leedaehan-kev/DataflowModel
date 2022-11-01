@@ -4,6 +4,7 @@ application = flask.Flask(__name__)
 
 msg=[]
 
+#http://ip:port/api/hello -> skill
 @application.route("/api/hello",methods=["POST"])
 def api_hello():
     global msg
@@ -27,6 +28,7 @@ def api_hello():
         }
     return flask.jsonify(res)
 
+#http://ip:port/api/move1 -> skill
 @application.route("/api/move1",methods=["POST"])
 def api_move1():
     global msg
