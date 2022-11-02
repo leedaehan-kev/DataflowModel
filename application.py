@@ -93,4 +93,3 @@ def api_move1():
         }
     return flask.jsonify(res)
 '''
-
