@@ -10,7 +10,7 @@ model = None
 #model load
 def load_model():
     global model
-    model = tensorflow.keras.models.load_model('/workspace/DataflowModel/DataflowModel.h5')
+    model = tensorflow.keras.models.load_model('./DataflowModel.h5')
 
 #http://ip:port/api/predict -> skill
 @app.route("/api/predict", methods=["POST"])
@@ -18,8 +18,10 @@ def api_predict():
 
     # UserRequest 중 발화를 req에 parsing.
     req = flask.request.get_json()
+    req = req['action']['params']['secureimage']
     print(req)
-    req = req['userRequest']['utterance']
+    req = req[req.find("http://"):req.find('"expire"') - 3]
+    print(req)
     
 	# 이미지 전처리 - 발화가 jpg, png 확장자일 때만 실행
     if 'jpg' in req or 'png' in req:
