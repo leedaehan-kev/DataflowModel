@@ -64,7 +64,7 @@ def api_predict():
         prediction = binModel.predict(data)		#binary model, 정수리 사진인지 확인
         print(prediction[0])
         if(prediction[0] < 0.5):
-            augment_size = 4
+            augment_size = 2
             x_augmented=img_generator.flow(np.tile(data[0].reshape(150*150*3),augment_size).reshape(-1,150,150,3),np.zeros(augment_size),batch_size=augment_size,shuffle=False).next()[0]
             print(x_augmented.shape)
             prediction = model.predict(x_augmented)
