@@ -5,6 +5,17 @@ application = flask.Flask(__name__)
 
 users = {}
 
+#nosql -> user의 정보를 json
+#JSON Tree
+#{Users:
+#	{User_ID:
+#		[value1, value2]
+#	}
+#}
+#Users -> {'User_ID1', 'User_ID2', ...}
+#Users['User_ID'] -> [value1, value2, ...]
+#update -> {} 추가, pop -> {} 제거, append -> [] 추가
+#Hello Block에서 호출
 @application.route("/api/user",methods=["POST"])
 def api_user():
     global users
