@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p {
+            font-size: 10px;
+        }
+        .container {
+            background-color: rgb(192, 192, 192);
+            width: 750px;
+            border-radius: 10px;
+        }
+      
+        .skill {
+            background-color: rgb(116, 194, 92);
+            color: white;
+            padding: 1%;
+            text-align: right;
+            font-size: 10px;
+            border-radius: 10px;
+        }
+        .width0 {width:{{img_output[0]}}}
+        .width1 {width:{{img_output[1]}}}
+        .width2 {width:{{img_output[2]}}}
+        .width3 {width:{{img_output[3]}}}
+        .width4 {width:{{img_output[4]}}}
+        .width_res {width:{{img_output[5]}}}
+.wrap {
+	width:750px;
+	margin: 0 auto;
+	overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    float: left;
+}
+        .txtcenter {
+            text-align:center;
+        }
+        .txtright {
+            text-align:right;
+        }
+	div>article {
+		float: left;
+		margin-bottom: 30px;
+		img{display: block;}
+    </style>
+</head>
+<body>
+    <h3>입력 이미지</h3>
+    <article><img src={{img_output[7]}} width=150 height=150></article>
+    <h3>AI prediction</h3>
+    <p>0단계</p>
+    <div class="container">
+        <div class="skill width0">{{img_output[0]}}</div>
+    </div>
+    <p>1단계</p>
+    <div class="container">
+        <div class="skill width1">{{img_output[1]}}</div>
+    </div>
+    <p>2단계</p>
+    <div class="container">
+        <div class="skill width2">{{img_output[2]}}</div>
+    </div>
+    <p>3단계</p>
+    <div class="container">
+        <div class="skill width3">{{img_output[3]}}</div>
+    </div>
+    <p>4단계</p>
+    <div class="container">
+        <div class="skill width4">{{img_output[4]}}</div>
+    </div>
+    
+<div class="wrap">
+<h4>비교 이미지입니다.</h4>
+<article><div class="txtcenter"><p>0단계</p></div><img src="https://dataflowtest-notice6143.run.goorm.io/static/s0.png"></article>
+<article><div class="txtcenter"><p>1단계</p></div><img src="https://dataflowtest-notice6143.run.goorm.io/static/s1.png"></article>
+<article><div class="txtcenter"><p>2단계</p></div><img src="https://dataflowtest-notice6143.run.goorm.io/static/s2.png"></article>
+<article><div class="txtcenter"><p>3단계</p></div><img src="https://dataflowtest-notice6143.run.goorm.io/static/s3.png"></article>
+<article><div class="txtcenter"><p>4단계</p></div><img src="https://dataflowtest-notice6143.run.goorm.io/static/s4.png"></article>
+<p>{{img_output[6]}}단계입니다</p>
+<div class="container">
+    <div class="skill width_res">{{img_output[5]}}</div>
+</div>
+</div>
+</body>
+</html>
