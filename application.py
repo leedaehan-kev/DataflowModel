@@ -5,7 +5,7 @@ application = flask.Flask(__name__)
 
 users = {}
 
-#nosql -> user의 정보를 json
+#user의 정보를 json, (key:value)
 #JSON Tree
 #{Users:
 #	{User_ID:
@@ -36,6 +36,7 @@ def api_val():
     req=flask.request.get_json()
     user_id = req['userRequest']['user']['id']
     users[user_id].append(req['action']['clientExtra']['val'])
+    print(req)
     print(users)
     return req
 
@@ -60,6 +61,17 @@ def api_result():
                             "text": msg
                         }
                     }
+                ],
+                "quickReplies": [
+                    {
+                          "label": "블록이동",
+                          "action": "block",
+                          "blockId": "637a191823b1d50015550368",
+                          "extra": {
+                          "val": "아토피",
+                          "key2": "value2"
+                         }
+                    }
                 ]
             }
         }
@@ -70,7 +82,7 @@ def api_result():
 @application.route("/api/hello",methods=["POST"])
 def api_hello():
     req=flask.request.get_json()
-    msg=req['userRequest']['utterance']
+    #msg=req['userRequest']['utterance']
     print(req)
     res = {
             "version": "2.0",
@@ -78,13 +90,14 @@ def api_hello():
                 "outputs": [
                     {
                         "simpleText": {
-                            "text": msg+"TEST"
+                            "text": "TEST"
                         }
                     }
                 ]
             }
         }
-    return flask.jsonify(res)
+    #return flask.jsonify(res)
+    return req
 
 if __name__ == "__main__":
     application.run(host='0.0.0.0')
